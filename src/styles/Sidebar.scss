@@ -1,0 +1,122 @@
+.Sidebar {
+   max-width:25%;
+   width: 100%;
+   padding: 30px 10px;
+   background-color: #000;
+   height: calc(100vh - 80px);
+   border: firebrick solid 2px ;
+   border-top: none;
+   overflow:scroll;
+   @media (max-width:690px) {
+      max-width: 100%;
+      width: 100%;
+      height: 120px;
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      align-items: center;
+   }
+   .sidebar__header {
+      margin-bottom: 20px;
+      @media (max-width:690px) {
+         margin-bottom: 0px;
+         margin-right: 10px;
+         height: 100%;
+         display: flex;
+         align-items: center;
+         hr {
+            height: 100%;
+            margin-left: 5px;
+         }
+      }
+      .sidebar__header--container {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         padding-bottom: 5px;
+         p {
+            font-size: 1.5em;
+         }
+         button {
+            color: cornflowerblue;
+            background: none;
+            border: none;
+            font-size: 1.2em;
+         }
+         button:hover {
+            color: cyan;
+         }
+         @media (max-width:690px) {
+            flex-direction:column;
+            align-items: space-between;
+            justify-content:flex-start;
+            padding-bottom: 0px;
+            p {
+               font-size: 1em;
+               text-align: center;
+            }
+            button {
+               font-size: 1em;
+               margin-top: 10px;
+            }
+         }
+      }
+   }
+   .sidebar__notes {
+      display: flex;
+      flex-direction: column;
+      @media (max-width:690px) {
+         flex-direction: row;
+      }
+   }
+   .sidebar__note {
+      height:100px;
+      border: firebrick solid 1px;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      margin-bottom: 20px;
+      .sidebar__note--title {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         button {
+            border: firebrick solid 1px;
+            background: firebrick;
+            padding: 0px 3px;
+         }
+      }
+      p {
+         text-transform: capitalize;
+      }
+      small {
+         font-size: 12px;
+      }
+      @media (max-width:690px) {
+         margin-bottom: 0px;
+         margin-right: 10px;
+         height: 90px;
+         width: 250px;
+      }
+   }
+   .sidebar__note:hover{
+      background-color:darkgray;
+      .sidebar__note--title {
+         strong {
+            color: black;
+         }
+      }
+      p , small {
+         color: black;
+      }
+   }
+   .sidebar__note + .sidebar__note {
+      margin-bottom: 20px;
+      @media (max-width:690px) {
+         margin-bottom: 0px;
+         margin-right: 10px;
+      }
+   }
+}

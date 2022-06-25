@@ -1,0 +1,48 @@
+.Main {
+   max-width: 70%;
+   width: 100%;
+   padding: 30px 10px;
+   background-color: #000;
+   height: calc(100vh - 80px);
+   border: firebrick solid 2px ;
+   border-top: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   @media (max-width:690px) {
+      max-width: 100%;
+      width: 100%;
+      height: calc(100vh - 80px - 120px);
+   }
+   #note__title {
+      width: 100%;
+      border: firebrick 1px solid;
+      outline: none;
+      background:none;
+      padding: 5px;
+   }
+   #textarea {
+      width: 100%;
+      margin-top: 10px;
+      height: 70%;
+      padding: 5px;
+      color: black;
+      background:darkgray;
+   }
+   #textarea::placeholder{
+      color: black;
+   }
+   .main__note--edit {
+      height: 50%;
+   }
+   .main__note--preview {
+      height: 50%;
+      padding-top: 20px;
+      overflow:scroll;
+      h1 {
+         font-size: 1.5em;
+         padding-bottom: 10px;
+         width: 100%;
+      }
+   }
+}
