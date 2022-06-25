@@ -1,29 +1,33 @@
 import React from "react";
 
 function Main({ activeNote , onUpdateNote}) {
-//   const onEditField = (field, value) => {
-//     onUpdateNote({
-//       ...activeNote,
-//       [field]: value,
-//       lastModified: Date.now(),
-//     });
-//   };
+  const onEditField = (field, value) => {
+    onUpdateNote({
+      ...activeNote,
+      [field]: value,
+      lastModified: Date.now(),
+    });
+  };
 
-//   if (!activeNote) return <div className="no-active-note">No Active Note</div>;
+  if (!activeNote) return <div className="no__note">No Note Selected</div>;
   return (
     <main className="Main">
       <div className="main__note--edit">
         <input
           type="text"
-          autoFocus
           id="note__title"
-          placeholder="Untitled"
+          placeholder="Note Title"
           value={activeNote.title}
+          onChange={(e) => onEditField("title", e.target.value)}
+          autoFocus
         />
         <textarea
           placeholder="Write Your Note Here..."
-          id="textarea"
-        ></textarea>
+              id="textarea"
+              value={activeNote.body}
+              onChange={(e) => onEditField("body", e.target.value)}
+         >
+        </textarea>
       </div>
       <hr />
       <div className="main__note--preview">

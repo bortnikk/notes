@@ -4,6 +4,7 @@ function Sidebar(props: any) {
    
    const notes = props.notes
 
+   // const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
 
   return (
      <aside className='Sidebar'>
@@ -22,7 +23,7 @@ function Sidebar(props: any) {
                      className={`sidebar__note`}
                  >
                   <div className="sidebar__note--title">
-                     <strong>{note.title}</strong>
+                     <strong>{note.title && note.title.substring(0,20) + '...'}</strong>
                        <button onClick={() =>
                           props.deleteNote(note.id)
                        } 

@@ -37,6 +37,7 @@
          padding-bottom: 5px;
          p {
             font-size: 1.5em;
+            text-transform: capitalize;
          }
          button {
             color: cornflowerblue;
@@ -82,17 +83,30 @@
          display: flex;
          flex-direction: row;
          justify-content: space-between;
+         align-items: center;
          button {
             border: firebrick solid 1px;
             background: firebrick;
             padding: 0px 3px;
          }
       }
+      strong {
+         text-transform: capitalize;
+         @media (max-width:690px) {
+            font-size:14px;
+         }
+      }
       p {
          text-transform: capitalize;
+         @media (max-width:690px) {
+            font-size:12px;
+         }
       }
       small {
          font-size: 12px;
+         @media (max-width:690px) {
+            font-size:10px;
+         }
       }
       @media (max-width:690px) {
          margin-bottom: 0px;

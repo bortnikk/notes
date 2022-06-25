@@ -20,6 +20,7 @@
       outline: none;
       background:none;
       padding: 5px;
+      text-transform: capitalize;
    }
    #textarea {
       width: 100%;
@@ -43,6 +44,29 @@
          font-size: 1.5em;
          padding-bottom: 10px;
          width: 100%;
+         color: #fff;
+         text-transform: uppercase;
       }
+      .preview__par {
+         p {
+            color: #fff;
+            text-transform: capitalize;
+         }
+      }
+   }
+}
+.no__note {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width:70%;
+   width: 100%;
+   height: calc(100vh - 80px);
+   color: firebrick;
+   font-size: 1.5em;
+   @media (max-width:690px) {
+      max-width: 100%;
+      width: 100%;
+      height: calc(100vh - 80px - 120px);
    }
 }
